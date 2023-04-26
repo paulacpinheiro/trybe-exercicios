@@ -1,3 +1,2 @@
-# Meu repositório de exercícios
+# Meu Portfólio de Exercícios 
 
-Exercicios trybe
