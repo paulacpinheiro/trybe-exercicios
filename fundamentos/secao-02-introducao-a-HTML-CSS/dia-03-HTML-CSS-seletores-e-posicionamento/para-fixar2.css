@@ -1,0 +1,9 @@
+ol li {
+    background-color: yellow;
+}
+ol:nth-child(even) li {
+    color: green;
+}
+ol:nth-child(odd) li {
+    text-transform: uppercase;
+}
