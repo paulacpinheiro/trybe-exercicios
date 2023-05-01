@@ -1,9 +1,10 @@
-let numero1 = 6;
-let numero2 = 3;
-let numero3 = 2;
+let custoProduto = 1;
+let valorDeVenda = 10;
 
-if (numero1 % 2 !== 0 || numero2 % 2 !== 0 || numero3 % 2 !== 0) {
-    console.log (true)
+if (custoProduto >= 0 && valorDeVenda >= 0) {
+  let custoTotalProduto = custoProduto * 1.2;
+  let lucro = (valorDeVenda - custoTotalProduto) * 1000;
+  console.log(lucro);
 } else {
-    console.log (false);
+  console.log("Error, valores não podem ser negativos!");
 };
