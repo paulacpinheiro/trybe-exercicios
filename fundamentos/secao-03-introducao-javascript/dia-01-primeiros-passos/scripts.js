@@ -1,15 +1,11 @@
-let a = 1;
-let b = 3;
-let c = 6;
+let valor = 0;
 
-
-if(a > b && a > c) {
-    console.log("'a' é o maior número");
+if (valor > 0) {
+    console.log("positive");
 }
-else if (b > a && b > c) {
-    console.log("'b' é o maior número");
+else if (valor < 0) {
+    console.log("negative");
 }
 else {
-    console.log("'c' é o maior número");
+    console.log("zero");
 }
-
