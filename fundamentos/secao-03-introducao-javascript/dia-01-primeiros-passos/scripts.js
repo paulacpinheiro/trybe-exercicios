@@ -1,11 +1,13 @@
-let valor = 0;
+let ladoA = 75;
+let ladoB = 45;
+let ladoC = 60;
 
-if (valor > 0) {
-    console.log("positive");
-}
-else if (valor < 0) {
-    console.log("negative");
-}
-else {
-    console.log("zero");
+if (ladoA > 0 && ladoB > 0 && ladoC > 0) {
+    if (ladoA + ladoB + ladoC === 180) {
+        console.log(true);
+    } else {
+        console.log(false);
+    };
+} else {
+    console.log("Erro");
 }
