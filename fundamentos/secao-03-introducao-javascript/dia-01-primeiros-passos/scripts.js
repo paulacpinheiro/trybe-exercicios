@@ -1,13 +1,24 @@
-let ladoA = 75;
-let ladoB = 45;
-let ladoC = 60;
+let peca = "rei";
 
-if (ladoA > 0 && ladoB > 0 && ladoC > 0) {
-    if (ladoA + ladoB + ladoC === 180) {
-        console.log(true);
-    } else {
-        console.log(false);
-    };
-} else {
-    console.log("Erro");
-}
+switch (peca.toLowerCase()) {
+    case "peão":
+        console.log("uma casa para frente, na primeira jogada pode andar duas");
+        break;
+    case "cavalo":
+        console.log("duas casas para frente e uma casa para o lado esquerdo ou o lado direito");
+        break;
+    case "torre":
+        console.log("movimento horizontal ou vertical");
+        break;
+    case "rei":
+        console.log("uma casa em qualquer direção");
+        break;
+    case "rainha":
+        console.log("diagonal, vertical e horizontal");
+        break;
+    case "bispo":
+        console.log("diagonal");
+        break;
+    default:
+        console.log("Erro.Peça inválida");
+};
