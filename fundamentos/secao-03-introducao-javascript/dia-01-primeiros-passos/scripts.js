@@ -1,21 +1,10 @@
-let currentHour = 19.54;
-let message = "";
+let weekDay = "domingo";
 
-if (currentHour >= 22) {
-    console.log("Não deveríamos comer nada, é hora de dormir")
-}
-else if (currentHour>= 18 && currentHour< 22){
-    console.log("Rango da noite, vamos jantar :D")
-}
-else if (currentHour>= 14 && currentHour< 18){
-    console.log("Vamos fazer um bolo pro café da tarde?")
-}
-else if (currentHour>= 11 && currentHour< 14){
-    console.log("Hora do almoço!!!")
-}
-else if (currentHour> 4 && currentHour< 11){
-    console.log("Hmmmm, cheiro de café recém passado")
+if (weekDay === "segunda" || weekDay === "terça" || weekDay === "quarta" || weekDay === "quinta" || weekDay === "sexta") {
+    console.log("Mais um dia de aprendizado na trybe");
 }
 else {
-    console.log(message)
-}
+    console.log("Uhuu descanso");
+} 
+
+
