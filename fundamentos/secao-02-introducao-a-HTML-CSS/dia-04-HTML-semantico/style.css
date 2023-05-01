@@ -1,9 +1,10 @@
-h1 {
+h2 {
     text-align: center;
+    
   }
 
   .first {
-    background-color: rgb(235, 200, 84);
+    background-color:blue;
     font-size: 20px;
     height: 50px;
     text-align: center;
