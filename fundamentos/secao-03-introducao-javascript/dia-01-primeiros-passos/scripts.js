@@ -1,10 +1,16 @@
-let weekDay = "domingo";
+let situacao = "aprovada";
 
-if (weekDay === "segunda" || weekDay === "terça" || weekDay === "quarta" || weekDay === "quinta" || weekDay === "sexta") {
-    console.log("Mais um dia de aprendizado na trybe");
+switch (situacao) {
+    case "aprovada":
+        console.log("Parabéns, você está no grupo de pessoas!");
+        break;
+    case "lista":
+        console.log("VOcê está na lista de espera");
+        break;
+    case "reprovada":
+        console.log("Infelizmente, você reprovou");
+        break;
+    default:
+        console.log("Informação incorreta");
+
 }
-else {
-    console.log("Uhuu descanso");
-} 
-
-
