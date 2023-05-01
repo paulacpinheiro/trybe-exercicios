@@ -1,8 +1,8 @@
-let a = 8;
+let a = 1;
 let b = 3;
 
-console.log(a + b);
-console.log(a - b);
-console.log(a * b);
-console.log(a / b);
-console.log(a % b);
+if (a > b){
+    console.log("'a' é maior que 'b'");
+} else {
+    console.log("'b' é maior que 'a'");
+}
