@@ -1,22 +1,9 @@
-let porcentagem = 59;
+let numero1 = 6;
+let numero2 = 3;
+let numero3 = 5;
 
-if (porcentagem < 0 || porcentagem > 100){
-    console.log("ERRO");
-} else if (porcentagem >= 90) {
-    console.log("A");
-}
-else if (porcentagem >= 80) {
-    console.log("B");
-}
-else if (porcentagem >= 70) {
-    console.log("C");
-}
-else if (porcentagem >= 60) {
-    console.log("D");
-}
-else if (porcentagem >= 50) {
-    console.log("E");
-}
-else {
-    console.log("F");
+if (numero1 % 2 === 0 || numero2 % 2 === 0 || numero3 % 2 === 0) {
+    console.log (true)
+} else {
+    console.log (false);
 };
