@@ -1,19 +1,42 @@
-let saldo = 200;
+let clientesTrybeBank = ['Ada', 'John', 'Gus'];
 
-function adicionaValor (valor) {
-    return saldo + valor
+
+/*function clientesNovos(cliente) {
+    if (typeof cliente === 'string') {
+        clientesTrybeBank.push(cliente)
+        return "Cliente adicionado com sucesso!"
+    } 
+    else {
+        return 'o tipo de parâmetro deve ser uma string'
+    }
 }
-function subtraiValor (valor) {
-    return saldo - valor
-}
-function multiplicaValor (valor) {
-    return saldo * valor
-}
-function divideValor (valor) {
-    return saldo / valor
+console.log(clientesNovos(true))
+console.log(clientesNovos('Filó'))
+console.log(clientesTrybeBank);*/
+
+function eliminaCliente(cliente) {
+    let clienteEncontrado = false;
+    if (typeof cliente === 'string') {
+        for (let index = 0; index < clientesTrybeBank; index += 1) {
+            if (cliente === clientesTrybeBank[index]) {
+                clientesTrybeBank.splice(index, 1);
+                clienteEncontrado = true;
+                return "Cliente excluído com sucesso!";
+            }
+
+
+        }
+        if (clienteEncontrado = false);
+        return "Cliente não encontrado!"
+
+    } else {
+        return "O tipo de parâmetro deve ser uma string"
+    }
 }
 
-console.log(adicionaValor(100));
-console.log (subtraiValor(55))
-console.log(multiplicaValor(3));
-console.log(divideValor(2));
+
+
+console.log(eliminaCliente(false))
+console.log(eliminaCliente('Maria'))
+console.log(eliminaCliente('Gus'))
+console.log(clientesTrybeBank)
