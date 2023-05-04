@@ -1,42 +1,40 @@
 let clientesTrybeBank = ['Ada', 'John', 'Gus'];
 
 
-/*function clientesNovos(cliente) {
+function validaParametro(cliente) {
     if (typeof cliente === 'string') {
-        clientesTrybeBank.push(cliente)
-        return "Cliente adicionado com sucesso!"
-    } 
-    else {
-        return 'o tipo de parâmetro deve ser uma string'
-    }
-}
-console.log(clientesNovos(true))
-console.log(clientesNovos('Filó'))
-console.log(clientesTrybeBank);*/
-
-function eliminaCliente(cliente) {
-    let clienteEncontrado = false;
-    if (typeof cliente === 'string') {
-        for (let index = 0; index < clientesTrybeBank; index += 1) {
-            if (cliente === clientesTrybeBank[index]) {
-                clientesTrybeBank.splice(index, 1);
-                clienteEncontrado = true;
-                return "Cliente excluído com sucesso!";
-            }
-
-
-        }
-        if (clienteEncontrado = false);
-        return "Cliente não encontrado!"
-
+        return true;
     } else {
-        return "O tipo de parâmetro deve ser uma string"
+        return 'Parâmetro deve ser uma string';
     }
+
 }
 
+function clienteIndex(cliente) {
+    for (let index = 0; index < clientesTrybeBank.length; index += 1) {
+        if (cliente === clientesTrybeBank[index]) {
+            return index;
+        }
+    }
+    return false;
+}
 
+function removeCliente(cliente) {
+    let valida = validaParametro(cliente);
+    if (valida !== true) {
+        return valida;
 
-console.log(eliminaCliente(false))
-console.log(eliminaCliente('Maria'))
-console.log(eliminaCliente('Gus'))
-console.log(clientesTrybeBank)
+    }
+    let index = clienteIndex(cliente);
+    if (index === false) {
+        return 'cliente não encontrado!';
+    }
+    clientesTrybeBank.slice(index, 1);
+    return 'Cliente excluído com sucesso!';
+}
+
+console.log(removeCliente(false));
+console.log(removeCliente('Carlos'));
+console.log(removeCliente('Jhon'));
+console.log(clientesTrybeBank);
+ 
