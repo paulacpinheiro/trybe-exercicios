@@ -1,60 +1,75 @@
-let order = {
-    name: 'Rafael Andrade',
-    phoneNumber: '11-98763-1416',
-    address: {
-      street: 'Rua das Flores',
-      number: '389',
-      apartment: '701',
-    },
-    order: {
-      pizza: {
-        marguerita: {
-          amount: 1,
-          price: 25,
-        },
-        pepperoni: {
-          amount: 1,
-          price: 20,
-        },
-      },
-      drinks: {
-        coke: {
-          type: 'Coca-Cola Zero',
-          price: 10,
-          amount: 1,
-        },
-      },
-      delivery: {
-        deliveryPerson: 'Ana Silveira',
-        price: 5,
-      },
-    },
-    payment: {
-      total: 60,
-    },
-  };
-  
-  function customerInfo(order) {
-    return 'Olá, ' + order.order.delivery.deliveryPerson
-     + ', entrega para: ' + order.name + ', telefone: ' 
-     + order.phoneNumber + ', R. ' + order.address.street 
-     + ', Nº ' + order.address.number 
-     + ', AP: ' + order.address.apartment;
-     }
-  
-     console.log(customerInfo(order))
+let lesson1 = {
+    materia: 'Matemática',
+    numeroEstudantes: 20,
+    professor: 'Maria Clara',
+    turno: 'manhã',
+};
 
-  customerInfo(order);
-  
-  function orderModifier(order) {
-    order.name = 'Luiz Silva';
-    order.payment.total = '50';
-    Object.keys(order.order.pizza );
-    order.order.drinks.coke.type;
-    
-    return 'Olá, ' + order.name +  ', o valor total de seu pedido de ' +
-    Object.keys(order.order.pizza) + ' e ' + order.order.drinks.coke.type +  ' é R$ ' + order.payment.total + ',00';
+let lesson2 = {
+    materia: 'História',
+    numeroEstudantes: 20,
+    professor: 'Carlos',
+};
+
+let lesson3 = {
+    materia: 'Matemática',
+    numeroEstudantes: 10,
+    professor: 'Maria Clara',
+    turno: 'noite',
+};
+
+function addNew(object, key, value) {
+    object[key] = 'noite';
+};
+addNew(lesson2, 'turno', 'noite')
+//console.log(lesson2)
+
+function keys(object) {
+    return Object.keys(object);
+}
+//console.log(keys(lesson1))
+
+function size(object) {
+    return Object.keys(object).length;
+}
+//console.log(size(lesson1))
+
+function valores(object) {
+    return Object.values(object);
+}
+//console.log(Object.values(lesson1));
+
+let allLessons = Object.assign({}, {
+    lesson1: lesson1,
+    lesson2: lesson2,
+    lesson3: lesson3,
+},
+);
+//console.log(allLessons)
+
+function sumStudents(object) {
+    let total = 0;
+    let keys = Object.keys(object);
+    for (let index in keys) {
+        total += object[keys[index]].numeroEstudantes;
     }
-    console.log(orderModifier(order));
-  
-  orderModifier(order);
+    return total;
+}
+//console.log(sumStudents(allLessons))
+
+function getValueByName(object, value) {
+    return Object.values(object)[value];
+}
+//console.log(getValueByName(lesson1, 2))
+
+function verification(object, key, value) {
+    let entries = Object.entries(object);
+    let equal = false;
+    for (let index in entries) {
+        if (entries[index][0] === key && entries[index][1] === value) equal = true;
+    }
+    return equal;
+}
+
+
+console.log(verification(lesson1, 'materia', 'Matemática'))
