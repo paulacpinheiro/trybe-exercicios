@@ -1,18 +1,35 @@
-let names = {
-  person1: 'João',
-  person2: 'Maria',
-  person3: 'Jorge',
+let info = {
+    personagem: 'Margarida',
+    origem: 'Pato Donald',
+    nota: 'Namorada do personagem principal nos quadrinhos do Pato Donald',
 };
-for (let key in names) {
-    console.log('Olá, ' + names[key]);
+
+
+console.log('Bem vinda, ' + info.personagem)
+
+info['recorrente'] = 'Sim';
+console.log(info);
+
+
+for (let key in info) {
+    console.log(key);
 }
 
-let car = {
-  model: 'A3 Sedan',
-  manufacturer: 'Audi',
-  year: 2020
+for (let key in info) {
+    console.log(info[key]);
+}
+
+let info2 = {
+    personagem: 'Tio Patinhas',
+    origem: 'Christmas on Bear Mountain, Dell’s Four Color Comics #178',
+    nota: 'O último MacPatinhas',
+    recorrente: 'Sim',
 };
 
-for(let key in car) {
-    console.log(key + ':' , car[key]);
+for (let key in info) {
+    if (key === 'recorrentes' && info[key] === 'sim' && info2[key] === 'sim') {
+        console.log('Todos recorrentes');
+    } else {
+        console.log(info[key] + ' e ' + info2[key]);
+    }
 }
