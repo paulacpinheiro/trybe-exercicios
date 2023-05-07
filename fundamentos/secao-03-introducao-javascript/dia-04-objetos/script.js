@@ -66,7 +66,8 @@ function verification(object, key, value) {
     let entries = Object.entries(object);
     let equal = false;
     for (let index in entries) {
-        if (entries[index][0] === key && entries[index][1] === value) equal = true;
+        if (entries[index][0] === key && entries[index][1] === value) 
+        equal = true;
     }
     return equal;
 }
