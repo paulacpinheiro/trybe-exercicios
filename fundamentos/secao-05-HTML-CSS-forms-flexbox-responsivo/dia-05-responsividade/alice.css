@@ -1,0 +1,101 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.container {
+  display: flex;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    flex-direction: column;
+  }
+
+  #title {
+    text-align: center;
+    font-size: x-large;
+    font-family: 'Courier New', Courier, monospace
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  h2 {
+    background-color: aqua;
+  }
+
+  #nav {
+    list-style: none;
+    flex-wrap: wrap;
+  }
+
+  .chapter {
+    list-style: none;
+  }
+
+  .aside-one {
+    text-align: center;
+  }
+
+  .aside-two {
+    text-align: center;
+  }
+
+  .main-content {
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .container {
+    flex-direction: column;
+  }
+
+  #title {
+    text-align: center;
+    font-size: x-large;
+    font-family: 'Courier New', Courier, monospace
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  h2 {
+    background-color: aqua;
+  }
+
+  #nav {
+    list-style: none;
+    flex-wrap: wrap;
+  }
+
+  .chapter {
+    list-style: none;
+  }
+
+  .aside-one {
+    text-align: center;
+  }
+
+  .aside-two {
+    text-align: center;
+  }
+
+  .main-content {
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .container {
+    flex-wrap: nowrap;
+  }
+}
