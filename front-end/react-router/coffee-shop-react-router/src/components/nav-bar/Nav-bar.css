@@ -1,0 +1,8 @@
+nav {
+  display:flex;
+}
+
+.active {
+  font-weight: 900;
+  color: brown;
+}
